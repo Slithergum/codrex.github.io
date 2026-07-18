@@ -2,10 +2,112 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
   </head>
   <body>
-       <a href="calc.html">calc</a>
+
+    <div class="div1" align=center>
+      <p>Hi Asawa❤️ <br><br>
+      I hope you're enjoying your special day. <br>
+        2years na kitang nakakasama sa birthday mo Asawa. Masaya ako na ikaw palagi yung nagiging kakampi, kaaway, at kasama ko sa lahat.<br><br> Mahal na mahal kitang palagi Asawa❤️<br><br>
+        Yours truly, <em>Janii</em>
+      </p>
+    </div>
+    <div id="cover" align=center class="cover">
+      <p id="left">Happy 🎂</p>
+      <p id="right">Birthday 🎉</p>
+      
+    </div>
+    <div align=center>
+      <button onclick="toggle()" id="btn">OPEN</button>
+    
+    </div>
+    <div align=center>
+    <video class="vid1" src=""></video>
+    <video class="vid2" src=""></video>
+    </div>
+    <script>
+    const btn=document.getElementById("btn");
+let left=document.getElementById("left");
+let right=document.getElementById("right");
+
+var temp=0;
+btn.onclick=function(){
+  if(temp===0){
+    left.style.animation = "leftToRight 1000ms 1 forwards";
+    right.style.animation = "rightOpen 1000ms 1 forwards";
+    temp++;
+  }
+  else{
+    left.style.animation = "rightToLeft 1000ms 1 forwards";
+    right.style.animation = "rightClose 1000ms 1 forwards";
+    temp--;
+  }
+  return;
+}
+</script>
+
+<style>
+    .div1{
+  padding-block: 3vh;
+  padding-inline: 5vw;
+  border-radius: 0px 45px 0px 45px;
+  background-color: Pink;
+  color: black;
+}
+.cover{
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  top:-335px;
+  
+}
+.cover p{
+  position: relative;
+  padding-block: 85px;
+  padding-inline: 10px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 45px;
+  background-color:pink;
+  color: white;
+}
+.cover p:nth-child(1){
+  background-color:;
+  border-radius: 0px 0px 0px 45px;
+  
+}
+.cover p:nth-child(2){
+
+  border-radius: 0px 45px 0px 0px;
+}
+button{
+  position: relative;
+  top:-300px;
+  height: 50px;
+  width: 150px;
+  font-size: 15px;
+  
+}
+@keyframes leftToRight{
+  from{right:0px;}
+  to{right:500px;}
+}
+@keyframes rightToLeft{
+  from{right:500px;}
+  to{right:0px;}
+}
+@keyframes rightOpen{
+  from{left:0px;}
+  to{left:500px;}
+}
+@keyframes rightClose{
+  from{left:500px;}
+  to{left:0px;}
+}
+</style>
+    
   </body>
 </html>
 
